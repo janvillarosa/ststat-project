@@ -1,4 +1,4 @@
-package ststatproject;
+package advstatmp1;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -8,6 +8,8 @@ public class SampleDistribution{
 
 	//input x, n, N, k
 	//or input x0,...,xk, a0,...,ak, n, N
+        private ArrayList<Integer> population;
+        
 	
 	public BigInteger computeFactorial(int num){
 	
@@ -25,23 +27,7 @@ public class SampleDistribution{
                 combination = combination.divide(computeFactorial(r).multiply(computeFactorial(n-r)));
 		return combination.doubleValue();
 
-	}
-	
-	public double computeHypergeometricProbability(int N, int n, int k, int x){
-	
-		return (computeCombination(k,x)*computeCombination(N-k,n-x))/computeCombination(N,n);
-	}
-		
-	public double computeMultivariateHypergeometricProbability(int a[], int x[], int N, int n){
-	
-		double numerator = 1;
-		
-		for(int i=0; i < x.length;i++){
-			numerator *= computeCombination(a[i],x[i]);
-		}
-		
-		return numerator/computeCombination(N,n);
-	}
+        }
         
         public double computeTotalProbability(double[] probabilities){
             
@@ -51,6 +37,16 @@ public class SampleDistribution{
             }
             
             return total;
+        }
+        
+        public ArrayList generateRandomSample(int size){
+            ArrayList<Integer> samples = new ArrayList();
+            
+            for(int i=0; i<size; i++){
+                samples.add(population.get((int)Math.random()%population.size()));
+            }
+            
+            return samples;
         }
 
         public DefaultTableModel getTabularForm(double[] probabilities, int[] x){
@@ -72,4 +68,5 @@ public class SampleDistribution{
             
             return model;
         }
+        
 }

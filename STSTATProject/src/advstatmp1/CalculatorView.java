@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ststatproject;
+package advstatmp1;
 
 import javax.swing.JButton;
 import javax.swing.JTable;
@@ -32,6 +32,7 @@ public class CalculatorView extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton4 = new javax.swing.JButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel13 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
@@ -62,6 +63,8 @@ public class CalculatorView extends javax.swing.JFrame {
         btnPopulation = new javax.swing.JButton();
         jLabel27 = new javax.swing.JLabel();
         tfPopulationUpper = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox();
+        jLabel1 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
         btnGraphPopulation = new javax.swing.JButton();
         jPanel20 = new javax.swing.JPanel();
@@ -268,6 +271,10 @@ public class CalculatorView extends javax.swing.JFrame {
 
         jLabel27.setText("to:");
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Uniform", "Skewed", "Bimodal", "Normal", "Random" }));
+
+        jLabel1.setText("Population Distribution");
+
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
         jPanel18Layout.setHorizontalGroup(
@@ -279,7 +286,7 @@ public class CalculatorView extends javax.swing.JFrame {
                         .addGap(0, 97, Short.MAX_VALUE)
                         .addComponent(btnPopulation))
                     .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel23)
                             .addGroup(jPanel18Layout.createSequentialGroup()
                                 .addComponent(jLabel26)
@@ -290,7 +297,9 @@ public class CalculatorView extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel27)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfPopulationUpper, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(tfPopulationUpper, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -308,6 +317,10 @@ public class CalculatorView extends javax.swing.JFrame {
                     .addComponent(tfPopulationLower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel27)
                     .addComponent(tfPopulationUpper, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnPopulation)
                 .addContainerGap())
@@ -588,7 +601,10 @@ public class CalculatorView extends javax.swing.JFrame {
     private javax.swing.JButton btnGraphXBar;
     private javax.swing.JButton btnPopulation;
     private javax.swing.JButton btnSample;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton4;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
