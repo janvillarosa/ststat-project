@@ -14,7 +14,11 @@ import java.util.ArrayList;
  */
 public class PopulationDistribution {
     
+<<<<<<< HEAD
             private ArrayList<Integer> population;
+=======
+        private ArrayList<Integer> population;
+>>>>>>> ee5ee576f4b36e51ed159a570ca2926a94c81091
         
         public void generateUniformPopulation(int lower, int upper, int N){
             
@@ -33,5 +37,15 @@ public class PopulationDistribution {
             }
             
         }
+<<<<<<< HEAD
+=======
+        
+        public void generateNormalPopulation(int lower, int upper, int N){
+            
+            for(int i=0; i<N; i++){
+                population.add((int)Math.random()%upper+lower);
+            }
+        }
+>>>>>>> ee5ee576f4b36e51ed159a570ca2926a94c81091
     
 }

@@ -69,4 +69,24 @@ public class SampleDistribution{
             return model;
         }
         
+<<<<<<< HEAD:STSTATProject/src/advstatmp1/SampleDistribution.java
+=======
+        public double computeStandardDeviation(float popSD, float n){
+            
+            double sd;
+            sd = popSD/Math.sqrt(n);
+            
+            return sd;
+        }
+        
+        public double computeZScore(float xbar, float mu,float popSD, float n){
+            
+            double zScore;
+            zScore = (xbar-mu)/computeStandardDeviation(popSD,n);
+            
+            return zScore;
+        }
+        
+        
+>>>>>>> ee5ee576f4b36e51ed159a570ca2926a94c81091:STSTATProject/src/advstatmp1/SampleDistribution.java
 }
