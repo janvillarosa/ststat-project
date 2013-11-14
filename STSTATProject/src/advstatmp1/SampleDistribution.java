@@ -77,7 +77,7 @@ public class SampleDistribution{
             return sd;
         }
         
-        public double computezScore(float xbar, float mu,float popSD, float n){
+        public double computeZScore(float xbar, float mu,float popSD, float n){
             
             double zScore;
             zScore = (xbar-mu)/computeStandardDeviation(popSD,n);
